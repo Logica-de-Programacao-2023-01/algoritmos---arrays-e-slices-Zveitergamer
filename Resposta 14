@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando o slice de inteiros com tamanho 8
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
+
+	// Solicitando ao usuário que informe os índices de elementos para trocar
+	var indice1, indice2 int
+	fmt.Print("Digite o primeiro índice: ")
+	fmt.Scan(&indice1)
+	fmt.Print("Digite o segundo índice: ")
+	fmt.Scan(&indice2)
+
+	// Verificando se os índices são válidos
+	if indice1 < 0 || indice1 >= len(slice) || indice2 < 0 || indice2 >= len(slice) {
+		fmt.Println("Índices inválidos!")
+		return
+	}
+
+	// Trocando os elementos de posição
+	slice[indice1], slice[indice2] = slice[indice2], slice[indice1]
+
+	// Imprimindo o slice resultante
+	fmt.Println("Slice resultante:", slice)
+}
