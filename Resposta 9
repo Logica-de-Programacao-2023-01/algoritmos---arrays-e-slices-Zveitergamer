@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando o array de floats com 6 elementos
+	array := [6]float64{}
+
+	// Solicitando ao usuário que informe um número
+	var numero float64
+	fmt.Print("Digite um número: ")
+	fmt.Scan(&numero)
+
+	// Adicionando o número em todas as posições do array
+	for i := 0; i < len(array); i++ {
+		array[i] = numero
+	}
+
+	// Imprimindo o array resultante
+	fmt.Println("Array resultante:", array)
+}
