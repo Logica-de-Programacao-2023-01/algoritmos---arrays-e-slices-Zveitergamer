@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando o array bidimensional de inteiros com 2 linhas e 3 colunas
+	array := [2][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+	}
+
+	// Solicitando ao usuário que informe um índice de linha
+	var linha int
+	fmt.Print("Digite o índice de linha: ")
+	fmt.Scan(&linha)
+
+	// Solicitando ao usuário que informe um índice de coluna
+	var coluna int
+	fmt.Print("Digite o índice de coluna: ")
+	fmt.Scan(&coluna)
+
+	// Imprimindo o valor armazenado na posição informada da matriz
+	valor := array[linha][coluna]
+	fmt.Println("Valor na posição", linha, ",", coluna, ":", valor)
+}
