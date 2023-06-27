@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	// Criando o slice de inteiros com tamanho 10
+	slice := []int{5, 2, 9, 1, 7, 3, 8, 6, 4, 10}
+
+	// Encontrando o valor mínimo e o valor máximo
+	min := math.MaxInt64
+	max := math.MinInt64
+
+	for _, num := range slice {
+		if num < min {
+			min = num
+		}
+
+		if num > max {
+			max = num
+		}
+	}
+
+	// Imprimindo o valor mínimo e o valor máximo
+	fmt.Println("Valor mínimo:", min)
+	fmt.Println("Valor máximo:", max)
+}
