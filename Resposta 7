@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando o slice de inteiros com tamanho 5
+	slice := make([]int, 0, 5)
+
+	// Solicitando ao usuário que informe um número inteiro
+	var numero int
+	fmt.Print("Digite um número inteiro: ")
+	fmt.Scan(&numero)
+
+	// Verificando se o número já está presente no slice
+	encontrado := false
+	for _, element := range slice {
+		if element == numero {
+			encontrado = true
+			break
+		}
+	}
+
+	// Adicionando o número ao slice apenas se ele não estiver presente
+	if !encontrado {
+		slice = append(slice, numero)
+	}
+
+	// Imprimindo o slice resultante
+	fmt.Println("Slice resultante:", slice)
+}
