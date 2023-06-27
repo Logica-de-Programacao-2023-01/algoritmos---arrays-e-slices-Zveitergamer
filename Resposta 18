@@ -1,0 +1,54 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var n int
+	fmt.Print("Digite um número inteiro positivo: ")
+	fmt.Scan(&n)
+
+	if n <= 0 {
+		fmt.Println("O número precisa ser positivo.")
+		return
+	}
+
+	primes := make([]int, 0, n)
+	num := 2
+
+	for len(primes) < n {
+		if isPrime(num) {
+			primes = append(primes, num)
+		}
+		num++
+	}
+
+	fmt.Println("Números primos:")
+	fmt.Println(primes)
+}
+
+func isPrime(num int) bool {
+	if num <= 1 {
+		return false
+	}
+
+	if num == 2 {
+		return true
+	}
+
+	if num%2 == 0 {
+		return false
+	}
+
+	sqrt := int(math.Sqrt(float64(num)))
+
+	for i := 3; i <= sqrt; i += 2 {
+		if num%i == 0 {
+			return false
+		}
+	}
+
+	return true
+}
