@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando o array de inteiros com 5 elementos
+	array := [5]int{2, 6, 9, 12, 7}
+
+	// Criando um novo slice contendo apenas os elementos múltiplos de 3
+	novoSlice := make([]int, 0)
+
+	for _, num := range array {
+		if num%3 == 0 {
+			novoSlice = append(novoSlice, num)
+		}
+	}
+
+	// Imprimindo o novo slice
+	fmt.Println("Novo slice:", novoSlice)
+}
