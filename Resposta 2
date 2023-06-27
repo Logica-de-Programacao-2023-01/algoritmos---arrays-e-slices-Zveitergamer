@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+    // Criando o slice inicial com os valores 1, 2, 3, 4 e 5
+    slice := []int{1, 2, 3, 4, 5}
+
+    // Removendo o terceiro elemento (índice 2) usando append
+    slice = append(slice[:2], slice[3:]...)
+
+    // Imprimindo o slice resultante
+    fmt.Println(slice)
+}
