@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando o array de inteiros com 10 elementos
+	array := [10]int{2, 5, 8, 3, 6, 9, 4, 7, 10, 1}
+
+	// Calculando a soma dos elementos nas posições pares
+	soma := 0
+
+	for i, num := range array {
+		if i%2 == 0 {
+			soma += num
+		}
+	}
+
+	// Imprimindo a soma dos elementos nas posições pares
+	fmt.Println("Soma dos elementos nas posições pares:", soma)
+}
