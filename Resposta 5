@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criando a matriz com 3 linhas e 2 colunas
+	matriz := [3][2]int{}
+
+	// Solicitando ao usuário os valores de cada elemento da matriz
+	for i := 0; i < len(matriz); i++ {
+		for j := 0; j < len(matriz[0]); j++ {
+			fmt.Printf("Digite o valor para o elemento [%d][%d]: ", i, j)
+			fmt.Scan(&matriz[i][j])
+		}
+	}
+
+	// Imprimindo a matriz resultante
+	fmt.Println("Matriz:")
+	for i := 0; i < len(matriz); i++ {
+		for j := 0; j < len(matriz[0]); j++ {
+			fmt.Printf("%d ", matriz[i][j])
+		}
+		fmt.Println()
+	}
+}
